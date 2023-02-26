@@ -13,7 +13,7 @@ def events():
         'ical': '1',
     }
     for k, v in request.args.items():
-        params['tribe-bar-' + k] = v
+        params['tribe_' + k] = v
 
     response = requests.get(url=EVENTS_URI, params=params)
     response.raise_for_status()

@@ -16,7 +16,7 @@ Deploy to any platform that supports Flask (e.g. Google App Engine).
 Use the /events endpoint to get the events in iCalendar format. Optional
 parameters are supported to filter the returned events:
 
-* category: filter by event category
+* eventcategory: filter by event category
 
   Value | Category
   ------|---------
@@ -38,40 +38,29 @@ parameters are supported to filter the returned events:
   106   | Storytimes
   3567  | Tours & Group Visits
 
-* location: filter by library location
+* venues: filter by library location
 
   Value | Location
   ------|---------
-  526   | Allegheny
-  622   | Beechview
-  647   | Brookline
-  667   | Carrick
-  673   | Downtown & Business
-  727   | East Liberty
-  729   | Hazelwood
-  731   | Hill District
-  732   | Homewood
-  733   | Knoxville
-  734   | Lawrenceville
-  1161  | Library for the Blind and Physically Handicapped
-  435   | Main (Oakland)
-  735   | Mt. Washington
-  736   | Sheraden
-  740   | South Side
-  741   | Squirrel Hill
-  742   | West End
-  548   | Woods Run
+  1281  | Allegheny
+  1283  | Beechview
+  1284  | Brookline
+  1285  | Carrick
+  1286  | Downtown
+  46    | East Liberty
+  1287  | Hazelwood
+  1289  | Hill District
+  1288  | Homewood
+  1290  | Knoxville
+  1291  | Lawrenceville
+  1292  | LAMP
+  1280  | Main (Oakland)
+  1293  | Mt. Washington
+  1294  | Sheraden
+  1295  | South Side
+  1296  | Squirrel Hill
+  1297  | West End
+  1298  | Woods Run
 
-* age-group: filter by event target age group
-
-  Value | Age Group
-  ------|----------
-  39    | Adults
-  4034  | Early Learners Birth-5 Years
-  38    | Kids Birth-Grade 5
-  1759  | School Age Kids Grades K-5
-  103   | Teens
-  102   | Tweens
-
-For example, to get the list of language classes for adults at the main
-(Oakland) library, use `/events?category=217&location=435&age-group=39`.
+For example, to get the list of language classes at the main
+(Oakland) library, use `/events?eventcategory=217&venues=1280
